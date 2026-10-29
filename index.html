@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Cost Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="calculator">
+        <h1>Service Cost Calculator</h1>
+        <form id="calculatorForm">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1">
+
+            <label for="productType">Select a service:</label>
+            <select id="productType" name="productType"></select>
+
+            <fieldset id="radioOptions" hidden>
+                <legend>Select an option:</legend>
+                <div id="radioList"></div>
+            </fieldset>
+
+            <fieldset id="propertyOptions" hidden>
+                <legend>Select a property:</legend>
+                <div id="propertyList"></div>
+            </fieldset>
+        </form>
+        <p id="result" aria-live="polite">Loading services...</p>
+    </main>
+</body>
+</html>
