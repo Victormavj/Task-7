@@ -4,63 +4,122 @@
 
 body {
     margin: 0;
-    padding: 32px 16px;
-    background-color: #f2f4f7;
-    color: #222;
+    padding: 32px 20px;
+    background-color: #f3f5f7;
+    color: #20242a;
     font-family: Arial, sans-serif;
 }
 
-.calculator {
-    max-width: 420px;
-    margin: 40px auto;
-    padding: 24px;
-    background-color: #fff;
-    border: 1px solid #d8dce2;
-    border-radius: 8px;
+.gallery-page {
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 h1 {
-    margin-top: 0;
-    font-size: 1.5rem;
+    margin: 0 0 24px;
+    text-align: center;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-input[type="number"],
-select {
-    padding: 10px;
-    font: inherit;
-}
-
-fieldset {
-    margin: 8px 0 0;
-    padding: 12px;
-    border: 1px solid #d8dce2;
-}
-
-#radioList,
-#propertyList {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.choice {
+.gallery {
     display: flex;
     align-items: center;
+    gap: 16px;
+}
+
+.gallery-window {
+    flex: 1;
+    overflow: hidden;
+}
+
+.gallery-track {
+    display: flex;
+    gap: 16px;
+    transition: transform 0.35s ease;
+}
+
+.gallery-track img {
+    display: block;
+    flex: 0 0 calc((100% - 32px) / 3);
+    width: calc((100% - 32px) / 3);
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.gallery-arrow {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    border: 0;
+    border-radius: 50%;
+    background-color: #1d5f91;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.gallery-arrow:disabled {
+    background-color: #aab4bd;
+    cursor: default;
+}
+
+.pager {
+    display: flex;
+    justify-content: center;
     gap: 8px;
+    margin-top: 20px;
 }
 
-.choice input {
-    margin: 0;
+.pager-button {
+    width: 34px;
+    height: 34px;
+    border: 1px solid #1d5f91;
+    border-radius: 50%;
+    background-color: white;
+    color: #1d5f91;
+    cursor: pointer;
 }
 
-#result {
-    min-height: 1.5em;
-    margin-bottom: 0;
-    font-weight: bold;
+.pager-button.active {
+    background-color: #1d5f91;
+    color: white;
 }
+
+#pageStatus {
+    text-align: center;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 16px 0;
+    border-top: 1px solid #d8dce2;
+    color: #555;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 24px 12px;
+    }
+
+    .gallery {
+        gap: 8px;
+    }
+
+    .gallery-track img {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .gallery-arrow {
+        width: 36px;
+        height: 36px;
+        flex-basis: 36px;
+        font-size: 16px;
+    }
+
+    .pager {
+        flex-wrap: wrap;
+    }
+}
+
