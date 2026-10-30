@@ -3,31 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service Cost Calculator</title>
+    <title>My page</title>
     <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.4.1.min.js" defer></script>
     <script src="script.js" defer></script>
 </head>
 <body>
-    <main class="calculator">
-        <h1>Service Cost Calculator</h1>
-        <form id="calculatorForm">
-            <label for="quantity">Quantity:</label>
-            <input type="number" id="quantity" name="quantity" min="1" value="1">
-
-            <label for="productType">Select a service:</label>
-            <select id="productType" name="productType"></select>
-
-            <fieldset id="radioOptions" hidden>
-                <legend>Select an option:</legend>
-                <div id="radioList"></div>
-            </fieldset>
-
-            <fieldset id="propertyOptions" hidden>
-                <legend>Select a property:</legend>
-                <div id="propertyList"></div>
-            </fieldset>
-        </form>
-        <p id="result" aria-live="polite">Loading services...</p>
+    <main class="gallery-page">
+        <h1>My page</h1>
+        <section class="gallery" aria-label="Image gallery">
+            <button class="gallery-arrow previous" type="button" aria-label="Previous images">&#10094;</button>
+            <div class="gallery-window">
+                <div class="gallery-track">
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&h=600&q=80" alt="Silver sports car">
+                    <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&h=600&q=80" alt="Black sports car">
+                    <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=900&h=600&q=80" alt="Red classic car">
+                    <img src="https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=900&h=600&q=80" alt="Blue car on a road">
+                    <img src="https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=900&h=600&q=80" alt="White car in a city">
+                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=900&h=600&q=80" alt="Car driving on a road">
+                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=900&h=600&q=80" alt="Red sports car">
+                    <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=900&h=600&q=80" alt="Classic car parked outdoors">
+                </div>
+            </div>
+            <button class="gallery-arrow next" type="button" aria-label="Next images">&#10095;</button>
+        </section>
+        <nav class="pager" aria-label="Gallery pages">
+            <button class="pager-button" type="button" aria-label="Go to page 1">1</button>
+            <button class="pager-button" type="button" aria-label="Go to page 2">2</button>
+            <button class="pager-button" type="button" aria-label="Go to page 3">3</button>
+            <button class="pager-button" type="button" aria-label="Go to page 4">4</button>
+            <button class="pager-button" type="button" aria-label="Go to page 5">5</button>
+            <button class="pager-button" type="button" aria-label="Go to page 6">6</button>
+            <button class="pager-button" type="button" aria-label="Go to page 7">7</button>
+            <button class="pager-button" type="button" aria-label="Go to page 8">8</button>
+        </nav>
+        <p id="pageStatus" aria-live="polite">Page 1 of 6</p>
+        <footer>Victor M.</footer>
     </main>
 </body>
 </html>
